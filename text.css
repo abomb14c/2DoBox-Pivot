@@ -7,116 +7,169 @@
 * {
   color:  #D1d3d4;
   font-family: 'Open Sans', sans-serif;
-
-}
-
-html {
-  font-size: 20px;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-}
-
-header {
-  margin: 0;
-  height: 50%;
-  background-color: #E5F3F2;
-}
-
-h1 {
-  width: 60%;
-  margin: auto;
-  color: #00A79D;
-  text-align: center;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  padding-top: 0.5rem; 
-
-}
-
-h1 span {
-  margin: -2;
-  color: #6D6E71;
 }
 
 article {
+  border-bottom: 3px solid #d1d3d4;
+  height: 40%;
   margin: auto;
   width: 80%;
-  height: 40%;
-  border-bottom: 3px solid #d1d3d4;
 }
 
-h2 {
-  display: inline-block;
-  color: #6D6E71;
-  font-size: 1rem;
-}
-
-h4 {
-  font-size: 0.9rem;
-  margin-left: 2rem;
-  display: inline-block;
-}
-
-h4 span {
-  color: #6D6E71;
-}
-
-
-p {
-  color: #939598;
-  position: relative;
-  bottom: 1.5rem;
-  font-size: 0.8rem;
+body {
+  height: 100vh;
+  margin: 0;
 }
 
 button {
   display: inline-block;
 }
 
-input::placeholder {
-  margin: 0;
-  padding-left: 0.5rem;
+input:placeholder {
   color: #BDBEC0;
+  margin: 0;
+  padding-left: .5rem;
   vertical-align: top;
 }
 
-.user-content::placeholder{
+h1 {
+  color: #00A79D;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: auto;
+  padding-top: 0.5rem;
+  text-align: center; 
+  width: 60%;
+}
+
+h1 span {
+  color: #6D6E71;
+  margin: -2;
+}
+
+h2 {
+  color: #6D6E71;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+h4 {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+h4 span {
+  color: #6D6E71;
+}
+
+html {
+  font-size: 20px;
+}
+
+header {
+  background-color: #E5F3F2;
+  height: 50%;
+  margin: 0;
+}
+
+p {
+  bottom: 1.5rem;
+  font-size: 0.8rem;
+  color: #939598;
   position: relative;
+}
+
+.user-content:placeholder {
   bottom: 30%;
+  position: relative;
 }
 
 .article-header {
   background-color: #FFFFFF;
-  position: relative;
   margin: 0;
+  position: relative;
   width: 100%;
 }
 
 .upvote-btn,
 .downvote-btn,
-.delete-btn {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  border-style: none;
+.delete-btn,
+.upvote-importance,
+.downvote-importance {
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 50%;
+  border-style: none;
+  height: 1rem;
+  width: 1rem;
+}
+
+.completed-task-btn {
+  top: 15px;
+  right: 8px;
+  float: right;
+  position: relative;
+}
+
+.completed-task-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.complete-task {
+  background-color: #f5f5f5f5;
 }
 
 .delete-btn {
-  display: inline-block;
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
   background-image: url(images/idea-icons/delete.svg);
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
 }
 
 .delete-btn:hover {
   background-image: url(images/idea-icons/delete-hover.svg);
+}
+
+.quality-line {
+  float: left;
+  margin-right: 20px;
+}
+
+.show-completed-btn, .more-tasks{
+  background-color: #00A79D;
+  color: #FFFFFF;
+  width: 414px;
+  height: 30px;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.importance-btn {
+  left:22.7rem;
+  position: relative;
+  width: 70px;
+}
+
+.importance-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.show-completed-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.more-tasks {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.more-tasks:hover {
+  background-color: red;
+  color: white;
 }
 
 .upvote-btn {
@@ -134,15 +187,32 @@ input::placeholder {
 .downvote-btn:hover {
   background-image: url(images/idea-icons/downvote-hover.svg);  
 }
+
+.upvote-importance {
+  background-image: url(images/idea-icons/upvote.svg);
+}
+
+.upvote-importance:hover {
+  background-image: url(images/idea-icons/upvote-hover.svg);
+}
+
+.downvote-importance {
+  background-image: url(images/idea-icons/downvote.svg);
+}
+
+.downvote-importance:hover {
+  background-image: url(images/idea-icons/downvote-hover.svg);
+}
+
 .save-btn {
-  position: relative;
-  left: 1.2rem;
-  border-radius: 0%;
-  width: 85%;
-  height: 1.5rem;
-  color: #FFFFFF;
   background-color: #00A79D;
+  border-radius: 0%;
+  color: #FFFFFF;
+  left: 1.2rem;
   font-size: 0.8rem;
+  height: 1.5rem;
+  position: relative;
+  width: 85%;
 }
 
 .save-btn:hover {
@@ -150,29 +220,28 @@ input::placeholder {
 }
 
 .missing-input-text {
-    position: relative;
-    top: 0.2rem;
-    margin: auto;
-    font-size: .6rem;
-    text-align: center;
-    width: 85%;
-    height: 1.5rem;
-    background-color: #E5F3F2;
-    border-style: none;
+  background-color: #E5F3F2;
+  border-style: none;
+  font-size: .6rem;
+  height: 1.5rem;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  top: 0.2rem;
+  width: 85%;
 }
 
 #title,
 #content,
 #search {
-  display: block;
   border: solid 1.5px #d1d3d4;
-  width: 85%;
-  margin: 0.5rem auto;
   color:  #D1d3d4;
-  font-weight: bold;
-  font-size: 0.8rem;  
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold; 
+  margin: 0.5rem auto;
+  width: 85%; 
 }
-
 
 #title {
   height: 1.6rem;
@@ -183,8 +252,8 @@ input::placeholder {
 }
 
 #search {
-  width: 80%;
   margin-top: 1rem;
+  width: 80%;
 }
 
 @media screen and (min-width: 400px) {
@@ -388,10 +457,10 @@ input::placeholder {
   }
 
   .save-btn {
-    margin-right: 4%;
+    margin-right: 5%;
     width: 40%;
   }
-  
+
   #title,
   #content,
   #search {
@@ -479,7 +548,6 @@ input::placeholder {
   }
 }
 
-
 @media screen and (min-width: 1300px) {
   header {
     height: 38%;
@@ -511,7 +579,6 @@ input::placeholder {
   }
 }
 
-
 @media screen and (min-width: 1400px) {
   header {
     height: 46%;
@@ -530,9 +597,9 @@ input::placeholder {
   }
 
   .save-btn {
-    width: 45%;
     height: 2.2rem;
     margin-left: 0%;
+    width: 45%;
   }
 
   .delete-btn {
@@ -544,9 +611,9 @@ input::placeholder {
   #title,
   #content,
   #search {
+    margin-bottom: 1.3rem;
     width: 45%;
     height: 2rem;
-    margin-bottom: 1.3rem;
   }
 
   .missing-input-text {

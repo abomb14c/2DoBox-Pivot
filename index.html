@@ -3,24 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Idea Box</title>
+    <title>2Do-Box</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab:700" rel="stylesheet">
     <link href="text.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <header>
       <form>
-        <h1>idea<span>box</span></h1>
+        <h1>2Do<span>Box</span></h1>
         <p class="missing-input-text"></p>
-        <input type="text" class="user-title" id="title" placeholder="Title" aria-label="Enter Your Idea Title">
-        <input type="textarea" class="user-content" id="content" placeholder="Body" aria-label="Write Your Idea">
+        <input type="text" class="user-title" id="title" placeholder="Title" aria-label="Enter Your To-Do Title">
+        <input type="textarea" class="user-content" id="content" placeholder="Task" aria-label="Write Your To-Do">
         <button class="save-btn" disabled>save</button>
       </form>
     </header>
     <main>
       <form>
-        <input type="text" id="search" placeholder="Search" aria-label="Search ideas">
+        <input type="text" id="search" placeholder="Filter" aria-label="Search To-Do's">
       </form>
+      <button class="show-completed-btn">Show Completed</button>
+      <button class="more-tasks">Show more TODOs...</button>
+      <button class="critical importance-btn" value="Critical">Critical</button>
+      <button class="high importance-btn" value="High">High</button>
+      <button class="normal importance-btn" value="Normal">Normal</button>
+      <button class="low importance-btn" value="Low">Low</button>
+      <button class="none importance-btn" value="None">None</button>
       <section class="parent-box"></section>
     </main>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
